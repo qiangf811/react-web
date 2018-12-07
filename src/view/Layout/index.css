@@ -1,15 +1,43 @@
+
+.logo-wrapper{
+  float: left;
+  width: 40%;
+  text-align: center;
+}
 .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40px;
-    float: left;
-    margin-top: 4px;
-  }
-  .ant-layout-header{
-    background: #fff;
-    padding: 0;
-  }
-  
-  
+  animation: App-logo-spin infinite 20s linear;
+  height: 40px;
+}
+.ant-layout-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: rgba(0,0,0,0.4);
+  padding: 0;
+  height: 48px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #eee;
+}
+.ant-layout{
+  background: #ffffff;
+}
+
+.ant-menu-horizontal{
+  border: none;
+}
+.ant-menu{
+  background:none;
+  color: #fff;
+}
+.ant-menu-horizontal > .ant-menu-item > a{
+  color: #fff;
+}
+
   @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);

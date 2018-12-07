@@ -1,0 +1,9 @@
+.container {
+    background-color:#fff;
+}
+.content{
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-top: 60px;
+    background-color: #fff;
+}
