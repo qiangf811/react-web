@@ -14,10 +14,9 @@ class Banner extends Component {
     render() {
         return (
             <div className="banner">
-                <Carousel afterChange={this.onChange} >
-                    <div><span className="accounting"></span></div>
+                <Carousel afterChange={this.onChange} autoplay>
                     <div><span className="brainstorming"></span></div>
-                    <div><span className="apple"></span></div>
+                    <div><span className="accounting"></span></div>
                     <div><span className="office"></span></div>
                 </Carousel>
             </div>

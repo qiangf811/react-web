@@ -1,0 +1,13 @@
+.iconbox-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.skills{
+  margin: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.description{
+  width: 350px;
+}

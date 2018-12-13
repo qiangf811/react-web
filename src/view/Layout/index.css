@@ -37,7 +37,16 @@
 .ant-menu-horizontal > .ant-menu-item > a{
   color: #fff;
 }
-
+.ant-menu-submenu-selected,.ant-menu-item-active:hover{
+  border-bottom: 2px solid transparent !important;
+  color: rgb(102, 220, 253) !important;
+}
+.ant-menu-horizontal > .ant-menu-item > a:hover{
+  color: rgb(102, 220, 253) !important;
+}
+.menu-active{
+  color: rgb(102, 220, 253) !important;
+}
   @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);

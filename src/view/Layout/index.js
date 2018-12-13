@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Layout, Menu } from 'antd';
 import Home from '../Home'
 import Concat from '../Concat'
@@ -10,17 +10,9 @@ import styles from './index.css';
 const { Header, Content, Footer } = Layout;
 
 class PageLayout extends Component {
+   // eslint-disable-next-line
   constructor() {
     super()
-    this.state = {
-      current: 'mail',
-    }
-  }
-
-  handleClick = (e) => {
-    this.setState({
-      current: e.key,
-    });
   }
 
   render() {
@@ -35,36 +27,30 @@ class PageLayout extends Component {
               </div>
               <Menu
                 theme="light"
-                onClick={this.handleClick}
-                selectedKeys={[this.state.current]}
+                selectedKeys={[]}
                 mode="horizontal"
               >
                 <Menu.Item key="home">
-                  <Link to="/">主页</Link>
+                  <NavLink to="/" exact activeClassName="menu-active">主页</NavLink>
                 </Menu.Item>
-                <Menu.Item key="product">
-                  <Link to="/product">产品</Link>
-                </Menu.Item>
-                <Menu.Item key="mail">
-                  <Link to="/mail">优品商城</Link>
+                <Menu.Item key="sill">
+                  <NavLink exact to="/sill" activeClassName="menu-active">个人技能</NavLink>
                 </Menu.Item>
                 <Menu.Item key="suprt">
-                  <Link to="/suprt">支持与服务</Link>
+                  <NavLink exact to="/suprt" activeClassName="menu-active">支持与服务</NavLink>
                 </Menu.Item>
                 <Menu.Item key="about">
-                  <Link to="/about">关于我们</Link>
+                  <NavLink exact activeClassName="menu-active" to="/about">关于我们</NavLink>
                 </Menu.Item>
                 <Menu.Item key="concat">
-                  <Link to="/concat">联系我们</Link>
+                  <NavLink exact activeClassName="menu-active" to="/concat">联系我们</NavLink>
+                </Menu.Item>
+                <Menu.Item key="product">
+                  <NavLink exact activeClassName="menu-active" to="/product">合作伙伴</NavLink>
                 </Menu.Item>
               </Menu>
             </Header>
             <Content>
-              {/* <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-              </Breadcrumb> */}
               <div style={{ background: '#fff', minHeight: 280 }}>
                 <Route path="/" exact component={Home} />
                 <Route path="/about" component={About} />
@@ -74,7 +60,8 @@ class PageLayout extends Component {
           </div>
         </Router>
         <Footer style={{ textAlign: 'center' }}>
-          FengYE Technology ©2018 Created by fengqiang
+          <span>FENGYE TECH ©2018 Created width React.js by John Qiang</span>
+          <p><a style={{color:'rgba(0, 0, 0, 0.65)'}} href="http://www.miitbeian.gov.cn">皖ICP备18004590号</a></p>
         </Footer>
       </Layout>
     )

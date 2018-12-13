@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@antv/data-set": "^0.10.1",
     "antd": "^3.11.0",
-    "bizcharts": "^3.4.1",
     "lodash": "^4.17.11",
     "react": "^16.6.3",
     "react-css-modules": "^4.7.8",

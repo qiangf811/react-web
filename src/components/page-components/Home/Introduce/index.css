@@ -1,0 +1,23 @@
+.person{
+  background:url('../../../../images/person.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 320px;
+}
+.ant-progress-inner div{
+  height: 12px !important;
+}
+.progress-box{
+  padding-top: 35px;
+}
+.progress-wrapper{
+  margin-bottom: 8px;
+}
+.self-info{
+  padding-top: 50px;
+  text-align:right;
+}
+.job-name{
+  color:rgb(0, 135, 204);
+  font-size:20px; 
+}
