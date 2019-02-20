@@ -15,7 +15,7 @@ export default class Service extends Component {
                         <Iconbox type="wechat" name="微信开发" desc="最新微信小程序、微信公众号开发，域名、服务器、功能开发到发布全程包揽！" />
                     </Col>
                     <Col span={8} className="service-wrapper">
-                        <Iconbox type="apple" name="NativeApp" desc="使用ReactNative/Weex跨平台开发高性能原生应用App，安卓、苹果一套代码搞定！" />
+                        <Iconbox type="apple" name="NativeApp" desc="使用Flutter/ReactNative/Weex跨平台开发高性能原生应用App，安卓、苹果一套代码搞定！" />
                     </Col>
                     <Col span={8} className="service-wrapper">
                         <Iconbox type="chrome" name="WebApp" desc="使用HTML5编写的移动Web应用，一个webapp几乎可以不加修改的运行在PC/Android/iOS！" />
