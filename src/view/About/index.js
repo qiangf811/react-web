@@ -3,7 +3,7 @@ import Content from '../../components/Content'
 
 export default class About extends Component {
   render() {
-    const [count, setCount] = [[],[]]
+    // const [count, setCount] = [[],[]]
     return (
       <Content>
         <div>
