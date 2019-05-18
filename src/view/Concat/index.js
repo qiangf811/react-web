@@ -1,25 +1,45 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect,Component } from 'react'
 import Content from '../../components/Content'
+import { Select } from 'antd'
+const Option = Select.Option
 
-export default function  Count() {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    console.log('我被调用了')
-    document.title = `You clicked ${count} times`;
-  });
-  useEffect(() => {
-    console.log('我是第二个useEffect，被调用了')
-  });
-  return (
-    <Content>
+export default class Count extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      sex: ''
+    }
+  }
+  handleChange = (value) => {
+    this.setState({
+      sex: value
+    })
+  }
+  render() {
+    return (
+      <Content>
         <div>
           <h1>react hook</h1>
-          <p>You clicked {count} times</p>
-          <button onClick={() => setCount(count + 1)}>
-            Click me
-          </button>
+          <div>
+            <SexSelect handleChange={this.handleChange} />
+            <span>当前select的值为{this.state.sex}</span>
+          </div>
         </div>
-    </Content>
-  )
+      </Content>
+    )
+  }
 }
 
+function SexSelect (props) {
+  const [sex, setSex] = useState([])
+  useEffect(() => {
+    if (sex.length) return
+    const sexArray = [ { name: '男', value: 'male' }, { name: '女', value: 'famale' }, { name: '人妖', value: 'famale1' } ]
+    setSex(sexArray)
+  })
+  return (
+    <Select style={{ width: 120 }} allowClear onChange={props.handleChange}>
+      {sex.map((item, index) => <Option value={item.value} key={index}>{item.name}</Option>)}
+    </Select>
+  )
+}
